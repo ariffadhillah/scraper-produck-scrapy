@@ -11,7 +11,7 @@ class houzzSpider(scrapy.Spider):
                     'Name': products.css('a').find('span.header-5.text-unbold.mlm::text').get(),
                     'Start': products.css('div.hz-pro-search-result__name-rating').find('span.hz-star-rate__rating-number::text').get(),
                     'Reviews': products.css('div.hz-pro-search-result__name-rating').find('span.hz-star-rate__review-string::text').get(),
-                    'Call': products.css('div.hz-pro-search-result__right-info__contact-info').clik('span.hz-pro-search-result__contact-info__cover::text').get(),
+                    'Call': products.css('div.hz-pro-search-result__right-info__contact-info').find('span.hz-pro-search-result__contact-info__cover::text').get(),
 
                     # 'price': products.css('span.price::text').get().replace('£',''),
                     'link': products.css('a').attrib['href'],
