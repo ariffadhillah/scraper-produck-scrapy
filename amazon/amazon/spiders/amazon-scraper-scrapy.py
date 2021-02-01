@@ -1,8 +1,8 @@
 import scrapy
 
 class whiskeySpider(scrapy.Spider):
-    name = 'whiskey'
-    start_urls = ['https://www.whiskyshop.com/scotch-whisky?item_availability=In+Stock']
+    name = 'amazon'
+    start_urls = ['https://www.amazon.com/s?k=amazonbasics']
 
     def parse(self, response):
         for products in response.css('div.product-item-info'):
